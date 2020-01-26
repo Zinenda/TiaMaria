@@ -1,83 +1,57 @@
 backend:
   name: git-gateway
-  accept_roles:
-    - admin
-    - client
-  branch: v2020
+  use_large_media_transforms_in_media_library: false
 
-media_folder: 'assets/uploads/'
+media_folder: 'assets/uploads'
 
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
-site_url: https://alumer.co.mz
-display_url: https://alumer.co.mz
 
 collections:
-
-  - label: "Sobre"
-    name: "sobre"
-    folder: "collections/_sobre"
+  - label: "Prato do Dia"
+    name: "prato-do-dia"
+    folder: "collections/_prato-do-dia"
     create: true
-    filter: {field: "lang", value: "pt"}
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Área de Texto", name: "body", widget: "markdown"}
+      - {label: "Dia da Semana", name: "publish-day", widget: "string"}
+      - {label: "Prado do Dia", name: "publish", widget: "boolean", default: "false"}
+      - {label: "Preço", name: "price", widget: "number", valueType: "float"}
 
-  - label: "Serviços"
-    name: "servicos"
-    folder: "collections/_servicos"
-    filter: {field: "lang", value: "pt"}
+  - label: "Menu"
+    name: "menu"
+    folder: "collections/_menu"
     create: true
     fields:
-      - {label: "Language", name: "lang", widget: "select", options: ["pt", "en"]}
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Área de Texto", name: "body", widget: "markdown"}
+      - label: "Tipos de Pratos"
+        name: "category"
+        widget: "select"
+        options: ["Entradas", "Bebidas", "Pratos", "Pizzas", "Saladas", "Sobremesas", "Sandes"]
+      - {label: "Preço", name: "price", widget: "number", valueType: "float"}
 
-  - label: "Equipamentos"
-    name: "equipamentos"
-    folder: "collections/_equipamentos"
-    create: true
-    fields:
-      - {label: "Equipamentos", name: "title", default: "Equipamentos", widget: "hidden"}
-      - {label: "Capa", name: "image", widget: "image"}
-      - label: "Imagens"
-        name: "images"
-        widget: "list"
-        fields:
-          - label: "Imagem"
-            name: "image"
-            widget: "image"
-
-  - label: "Clientes"
-    name: "clientes"
-    folder: "collections/_clientes"
-    create: true
-    fields:
-      - {label: "Clientes", name: "title", default: "Clientes", widget: "hidden"}
-      - label: "Cliente"
-        name: "client"
-        widget: "list"
-        fields:
-          - {label: "Empresa", name: "company", widget: "string"}
-          - label: "Logotipo"
-            name: "image"
-            widget: "image"
-
-  - label: "Responsabilidade Social"
-    name: "aids"
-    folder: collections/_aids
+  - label: "Eventos"
+    name: "eventos"
+    folder: "collections/_eventos"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: Nome do Evento", name: "title", widget: "string"}
       - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Capa", name: "image", widget: "image"}
-      - {label: "Layout", name: "layout", default: "page", widget: "hidden"}
-      - label: "Imagens"
-        name: "images"
+      - {label: "Capa do Evento", name: "image-cover", widget: "image"}
+
+  - label: "Galeria"
+    name: "galeria"
+    folder: "collections/_galeria"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: Nome do Evento", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Capa do Evento", name: "image-cover", widget: "image"}
+      - label: "Fotos"
+        name: "photos"
         widget: "list"
-        fields:
-          - label: "Imagem"
-            name: "image"
-            widget: "image"
+        field: 
+          - {label: "Foto", name: "photo", widget: "image"}
