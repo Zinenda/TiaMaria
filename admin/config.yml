@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - client
+  branch: v2020
+
+media_folder: 'assets/uploads/'
+
+logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
+site_url: https://alumer.co.mz
+display_url: https://alumer.co.mz
+
+collections:
+
+  - label: "Sobre"
+    name: "sobre"
+    folder: "collections/_sobre"
+    create: true
+    filter: {field: "lang", value: "pt"}
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Área de Texto", name: "body", widget: "markdown"}
+
+  - label: "Serviços"
+    name: "servicos"
+    folder: "collections/_servicos"
+    filter: {field: "lang", value: "pt"}
+    create: true
+    fields:
+      - {label: "Language", name: "lang", widget: "select", options: ["pt", "en"]}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Área de Texto", name: "body", widget: "markdown"}
+
+  - label: "Equipamentos"
+    name: "equipamentos"
+    folder: "collections/_equipamentos"
+    create: true
+    fields:
+      - {label: "Equipamentos", name: "title", default: "Equipamentos", widget: "hidden"}
+      - {label: "Capa", name: "image", widget: "image"}
+      - label: "Imagens"
+        name: "images"
+        widget: "list"
+        fields:
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
+
+  - label: "Clientes"
+    name: "clientes"
+    folder: "collections/_clientes"
+    create: true
+    fields:
+      - {label: "Clientes", name: "title", default: "Clientes", widget: "hidden"}
+      - label: "Cliente"
+        name: "client"
+        widget: "list"
+        fields:
+          - {label: "Empresa", name: "company", widget: "string"}
+          - label: "Logotipo"
+            name: "image"
+            widget: "image"
+
+  - label: "Responsabilidade Social"
+    name: "aids"
+    folder: collections/_aids
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - {label: "Capa", name: "image", widget: "image"}
+      - {label: "Layout", name: "layout", default: "page", widget: "hidden"}
+      - label: "Imagens"
+        name: "images"
+        widget: "list"
+        fields:
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
