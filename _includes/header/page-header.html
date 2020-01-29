@@ -1,0 +1,17 @@
+<style>
+    {% capture include_to_scssify %}
+        {% include header/page-header.scss %}
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+</style>
+
+<header class="page-header">
+    {% include nav/navbar.html %}
+    <div class="container">
+        <div class="page-header-content center">
+            <img src="{{ site.image }}" style="width: 80px;" alt="Logotipo {{ site.title }}">
+
+            <a href="#menu" class="btn-large waves-effect waves-light">Aprecie o Menu</a>
+        </div>
+    </div>
+</header>

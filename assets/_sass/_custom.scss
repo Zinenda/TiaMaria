@@ -1,0 +1,47 @@
+nav {
+    .nav-wrapper {
+        a.brand-logo {
+            svg {
+                height: 50px;
+                padding-top: 5px;
+            }
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.inline-list {
+    display: inline-flex;
+}
+
+.primary-color {
+    background: $primary-color;
+}
+
+.primary-color-text {
+    color: $primary-color-dark;
+}
+
+.primary-color-light {
+    background: $primary-color-light;
+}
+
+.primary-color-dark {
+    background: $primary-color-dark;
+}
+
+.waves-effect.waves-primary .waves-ripple {
+    background-color: rgba($color: $primary-color, $alpha: .65);
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.text-justified {
+    text-align: justify;
+}

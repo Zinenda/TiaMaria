@@ -1,0 +1,14 @@
+- title: Home
+  url: /
+
+- title: Menu
+  url: "#menu"
+
+- title: Reservas
+  url: "#reservas"
+
+- title: Resort
+  url: "#resort"
+
+- title: Galeria
+  url: "#galeria"
