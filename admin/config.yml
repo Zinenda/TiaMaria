@@ -7,6 +7,15 @@ media_folder: 'assets/uploads'
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
 
 collections:
+  - label: "Sobre"
+    name: "sobre"
+    folder: "collection/_sobre"
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Icones", name: "icons", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+
   - label: "Prato do Dia"
     name: "prato-do-dia"
     folder: "collections/_prato-do-dia"
