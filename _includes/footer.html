@@ -1,10 +1,51 @@
-<footer class="page-footer center">
+<footer class="page-footer">
     <div class="container">
-        <img src="{{ site.logo }}" alt="Logotipo {{ site.title }}" height="80">
+        <div class="section-grid">
+            <article>
+                <h6 class="bolder">Localização</h6>
+                Av. Eduardo Mondlane, <br>
+                por trás do INAS (Instituto Nacional de Acção Social)
+            </article>
 
-        <p class="primary-color-text"><i class="fas fa-map-marker-alt"></i> Localização</p>
-        <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quos doloribus vel quidem similique assumenda odio excepturi provident aperiam! Cumque distinctio maxime eum maiores vel suscipit ipsa sequi, magni incidunt.</p>
+            <article>
+                <h6 class="bolder">Contactos</h6>
 
-        <p class="primary-color-text"><i class="fas fa-phone"></i></p>
+                <a href="mailto:{{ site.email }}" title="Email" class="white-text">
+                    <i class="fas fa-envelope"></i> {{ site.email }}
+                </a>
+                <br>
+                <a href="tel:+258 84 915 8049" title="Celular" class="white-text">
+                    <i class="fas fa-phone"></i> +258 84 915 8049
+                </a>
+                <br>
+                <a href="tel:+258 82 580 0990" title="Celular" class="white-text">
+                    <i class="fas fa-mobile"></i> +258 82 580 0990
+                </a>
+            </article>
+
+            <article>
+                <h6 class="bolder">Social</h6>
+
+                <ul class="inline-list">
+                    {% for item in site.data.social %}
+                        <li>
+                            <a href="{{ item.url }}" title="{{ item.title }}" class="white-text waves-effect waves-circle waves-light">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fab fa-{{ item.icon }} fa-stack-1x"></i>
+                                    <i class="far fa-circle fa-stack-2x"></i>
+                                </span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </article>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            &copy; {{ site.time | date: "%Y" }} {{ site.title }} - {{ site.description }} | Todos Direitos Reservados
+            <br>
+            Designed by <a href="http://izitag.co" target="_blank" rel="noopener noreferrer" class="white-text">IZITech</a>
+        </div>
     </div>
 </footer>

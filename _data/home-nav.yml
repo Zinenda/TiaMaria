@@ -1,0 +1,15 @@
+- title: Página Inicial
+  url: /
+  icon: home
+
+- title: Quem Somos
+  url: "#sobre"
+  icon: users
+
+- title: Restaurante
+  url: "#restaurante"
+  icon: utensils
+
+- title: Reservas de Eventos
+  url: "#eventos"
+  icon: glass-cheers

@@ -1,15 +1,38 @@
-<nav class="transparent">
+<nav class="white primary-color-text">
     <div class="nav-wrapper">
-        <a href="/" class="brand-logo center">
-            {% include nav/TiaMariaLogo.svg %}
-        </a>
+        <div style="padding-left: 10px; padding-right: 10px;">
+            <a href="/" class="brand-logo center">
+                {% include nav/TiaMariaLogo.svg %}
+            </a>
 
-        <a href="#" data-target="sideNav" class="sidenav-trigger"><i class="fas fa-2x fa-bars"></i></a>
+            <a href="#" data-target="sideNav" class="sidenav-trigger">
+                <i class="fas fa-lg fa-bars"></i>
+            </a>
 
-        <ul class="right hide-on-med-and-down">
-            {% include nav/nav.html %}
+            <ul class="left hide-on-med-and-down">
+                {% if page.layout == "pages" %}
+                    {% include nav/nav.html %}
 
-            {% include social.html %}
-        </ul>
+                    {% else %}
+                        {% for item in site.data.home-nav %}
+                            <li>
+                                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-light">
+                                    <i class="fas fa-{{ item.icon }}"></i> {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                {% endif %}
+            </ul>
+
+            <ul class="right">
+                {% include social.html %}
+
+                <li>
+                    <a href="#modalContactos" class="btn waves-effect waves-light modal-trigger">
+                        <i class="fas fa-envelope"></i> Contacte-nos
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

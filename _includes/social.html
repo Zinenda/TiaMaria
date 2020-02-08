@@ -1,10 +1,5 @@
 {% for item in site.data.social %}
     <li>
-        <a href="{{ item.url }}" title="{{ item.title }}">
-            <span class="fa-stack fa-1x">
-                <i class="fas {{ item.icon }} fa-stack-1x"></i>
-                <i class="far fa-circle fa-stack-2x"></i>
-            </span>
-        </a>
+        <a href="{{ item.url }}" title="{{ item.title }}"><i class="fab fa-{{ item.icon }}"></i></a>
     </li>
 {% endfor %}
