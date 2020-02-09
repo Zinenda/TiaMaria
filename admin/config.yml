@@ -21,7 +21,6 @@ collections:
     create: true
     fields:
       - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Icones", name: "icons", widget: "string"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
   - label: "Prato do Dia"
@@ -57,18 +56,3 @@ collections:
       - {label: Nome do Evento", name: "title", widget: "string"}
       - {label: "Data", name: "date", widget: "datetime"}
       - {label: "Capa do Evento", name: "image-cover", widget: "image"}
-
-  - label: "Galeria"
-    name: "galeria"
-    folder: "collections/_galeria"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: Nome do Evento", name: "title", widget: "string"}
-      - {label: "Data", name: "date", widget: "datetime"}
-      - {label: "Capa do Evento", name: "image-cover", widget: "image"}
-      - label: "Fotos"
-        name: "photos"
-        widget: "list"
-        field: 
-          - {label: "Foto", name: "photo", widget: "image"}
