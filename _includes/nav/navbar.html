@@ -1,7 +1,7 @@
-<nav class="white primary-color-text">
+<nav class="nav-extended transparent">
     <div class="nav-wrapper">
         <div style="padding-left: 10px; padding-right: 10px;">
-            <a href="/" class="brand-logo center" style="padding-top: 10px;">
+            <a href="/" class="brand-logo" style="padding-top: 10px;">
                 {% include nav/TiaMariaLogo.svg %}
             </a>
 
@@ -9,7 +9,7 @@
                 <i class="fas fa-lg fa-bars"></i>
             </a>
 
-            <ul class="left hide-on-med-and-down">
+            <ul class="right hide-on-med-and-down">
                 {% if page.layout == "pages" %}
                     {% include nav/nav.html %}
 
@@ -22,9 +22,7 @@
                             </li>
                         {% endfor %}
                 {% endif %}
-            </ul>
 
-            <ul class="right hide-on-med-and-down">
                 {% include social.html %}
 
                 <li>

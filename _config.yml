@@ -17,9 +17,7 @@ collections_dir: collection
 collections:
   slider:
   sobre:
-    output: true
   servicos:
-    output: true
   menu:
   eventos:
 
