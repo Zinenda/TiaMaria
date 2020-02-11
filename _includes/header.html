@@ -9,10 +9,10 @@
     {% include nav/navbar.html %}
 
     <div class="header-content center white-text">
-        <img src="{{ site.logo }}" alt="" style="width: 50%;">
+        <img src="{{ site.logo }}" alt="" style="width: 50%;" class="hide-on-med-and-down">
         <h1 class="bolder">{{ site.title }}</h1>
         <h2 class="bold">{{ site.description }}</h2>
 
-        {% include cta.html %}
+        {% include home/scrolldown.html %}
     </div>
 </header>

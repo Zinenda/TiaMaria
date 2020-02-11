@@ -1,0 +1,48 @@
+<section id="historia" class="scrollspy">
+    <div class="section-grid-no-gap">
+        <img data-src="/assets/uploads/mathapadatiamaria.jpg" alt="Prato Tradicional da Tia Maria" class="lazy">
+
+        <div class="grey lighten-4">
+            <div class="section container">
+                <blockquote>
+                    {% for item in site.historia limit: 1 %}
+                        <h4 class="bolder primary-color-text">{{ item.title }}</h4>
+                        <div class="text-justified">
+                            {{ item.content }}
+                        </div>
+                    {% endfor %}
+                </blockquote>
+                <br>
+                <a href="#maisHistoria" class="modal-trigger btn waves-effect waves-light">Saiba Mais</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="maisHistoria" class="modal">
+    <div class="modal-content container">
+        <h5 class="bold primary-color-text center-align">Nossa História</h5>
+
+        <div class="row section">
+            <div class="col s12">
+                <ul class="tabs tabs-fixed-width z-depth-1">
+                    {% for item in site.historia offset: 1 limit: 2 %}
+                        <li class="tab waves-effect waves-primary">
+                            <a href="#maisHistoria{{ forloop.index }}" class="primary-color-text">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            {% for item in site.historia offset: 1 limit: 2 %}
+                <div class="col s12 section">
+                    <div id="maisHistoria{{ forloop.index }}">
+                        <div class="text-justified light">
+                            {{ item.content }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

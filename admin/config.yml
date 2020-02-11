@@ -9,11 +9,17 @@ logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc5
 collections:
   - label: "Slides"
     name: "slider"
-    folder: "collection/_slider"
+    folder: "collections/_slider"
     create: true
     fields:
-      - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Titulo", name: "title", widget: "string"}      
+      - {label: "Slides", name: "title", default: "Slider", widget: "hidden"}
+      - label: "Imagens"
+        name: "images"
+        widget: "list"
+        fields:
+          - label: "Imagem"
+            name: "image"
+            widget: "image"    
 
   - label: "Sobre"
     name: "sobre"

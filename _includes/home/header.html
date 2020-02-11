@@ -1,0 +1,7 @@
+<header class="slider">
+    <ul class="slides">
+        {% for item in site.slider.first.image %}
+            <img src="{{ item.image }}" alt="">
+        {% endfor %}
+    </ul>
+</header>

@@ -1,0 +1,16 @@
+<section id="motivacao" class="scrollspy">
+    <div class="section-grid-no-gap">
+        <div class="section container">
+                <blockquote>
+                    {% for item in site.historia offset: 3 limit: 1 %}
+                        <h4 class="bolder primary-color-text">{{ item.title }}</h4>
+                        <div class="text-justified">
+                            {{ item.content }}
+                        </div>
+                    {% endfor %}
+                </blockquote>
+        </div>
+
+        <img data-src="/assets/uploads/peixechicoa.jpg" alt="Prato Chicoa da Tia Maria" class="lazy">
+    </div>
+</section>

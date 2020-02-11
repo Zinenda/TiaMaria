@@ -23,7 +23,7 @@ img {
 }
 
 .primary-color-text {
-    color: $primary-color-dark;
+    color: $primary-color;
 }
 
 .primary-color-light {
@@ -40,6 +40,10 @@ img {
 
 .bolder {
     font-weight: bolder;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .text-justified {

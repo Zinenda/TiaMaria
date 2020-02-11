@@ -31,6 +31,29 @@
                     </a>
                 </li>
             </ul>
+
+            <ul id="sideNav" class="sidenav">
+                <li>
+                    <a href="/" class="brand-logo">
+                        <img src="{{ site.image }}" alt="Logotipo {{ site.title }}">
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                {% if page.layout == "pages" %}
+                    {% include nav/nav.html %}
+
+                    {% else %}
+                        {% for item in site.data.home-nav %}
+                            <li>
+                                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-primary">
+                                    <i class="fas fa-{{ item.icon }}"></i> {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                {% endif %}
+            </ul>
         </div>
     </div>
 </nav>
