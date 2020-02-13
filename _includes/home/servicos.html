@@ -1,0 +1,26 @@
+<section id="servicos" class="grey lighten-4 scrollspy primary-color-text">
+    <div class="container section">
+        <h4 class="center-align bolder">O Que Oferecemos</h4>
+
+        <div class="section-grid section">
+            {% for item in site.servicos %}
+                <div class="card-panel hoverable">
+                    <div class="container">
+                        <h4 class="center-align">
+                            <span class="fa-stack fa-1x">
+                                <i class="fas fa-{{ item.icon }} fa-stack-1x"></i>
+                                <i class="far fa-circle fa-stack-2x"></i>
+                            </span>
+                        </h4>
+                        <h5 class="bold center-align">{{ item.title }}</h5>
+    
+                        <div class="light text-justified">
+                            {{ item.content | truncatewords: 20 }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
