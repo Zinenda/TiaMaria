@@ -1,36 +1,33 @@
-<nav class="nav-extended transparent">
-    <div class="nav-wrapper">
-        <div style="padding-left: 10px; padding-right: 10px;">
-            <a href="/" class="brand-logo" style="padding-top: 10px;">
-                {% include nav/TiaMariaLogo.svg %}
+<nav class="white primary-color-text">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+                {% include nav/TiaMariaLogo.svg %} {% include nav/TiaMariaLogotipo.svg %}
             </a>
 
             <a href="#" data-target="sideNav" class="sidenav-trigger">
                 <i class="fas fa-lg fa-bars"></i>
             </a>
-
-            <ul class="right hide-on-med-and-down">
-                {% if page.layout == "pages" %}
-                    {% include nav/nav.html %}
-
-                    {% else %}
-                        {% for item in site.data.home-nav %}
-                            <li>
-                                <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-light">
-                                    <i class="fas fa-{{ item.icon }}"></i> {{ item.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                {% endif %}
-
-                {% include social.html %}
-
-                <li>
-                    <a href="#modalContactos" class="btn waves-effect waves-light modal-trigger">
-                        <i class="fas fa-envelope"></i> Contacte-nos
-                    </a>
-                </li>
-            </ul>
         </div>
+
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <a href="#" class="primary-color-text">
+                    <i class="fas fa-lg fa-map-marker-alt"></i> Av. Eduardo Mondlane, Cidade de Tete
+                </a>
+            </li>
+
+            <li>
+                <a href="tel:+258 84 013 4804" class="primary-color-text">
+                    <i class="fas fa-lg fa-phone"></i> 84 013 4804
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:{{ site.email }}" class="primary-color-text">
+                    <i class="fas fa-lg fa-envelope"></i> {{ site.email }}
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>

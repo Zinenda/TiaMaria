@@ -1,10 +1,19 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="pt">
     {% include head.html %}
     <body>
-        {% include nav/sidenav.html %}
+        {% include nav/navbar.html %}
+
         <main class="animate-bottom">
-            {{ content }}
+            {% include header/page-header.html %}
+            
+            <div id="main-content" class="scrollspy">
+                {{ content }}
+            </div>
         </main>
 
         {% include footer.html %}

@@ -29,6 +29,15 @@ collections:
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Descrição", name: "body", widget: "markdown"}
 
+  - label: "Serviços"
+    name: "servicos"
+    folder: "collection/_servicos"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Ícones", name: "icon", widget: "string"}
+      - {label: "Descrição", name: "body", widget: "markdown"}
+
   - label: "Prato do Dia"
     name: "prato-do-dia"
     folder: "collections/_prato-do-dia"

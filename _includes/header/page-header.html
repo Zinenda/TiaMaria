@@ -1,17 +1,34 @@
-<style>
-    {% capture include_to_scssify %}
-        {% include header/page-header.scss %}
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
-</style>
+{% include header/page-header-bg.html %}
 
-<header class="page-header">
-    {% include nav/navbar.html %}
-    <div class="container">
-        <div class="page-header-content center">
-            <img src="{{ site.image }}" style="width: 80px;" alt="Logotipo {{ site.title }}">
+<header class="page-header white-text">
+    <nav class="transparent">
+        <div class="nav-wrapper">
+            <div class="container">
+                <ul class="hide-on-med-and-down">
+                    {% include nav/nav.html %}
+                </ul>
 
-            <a href="#menu" class="btn-large waves-effect waves-light">Aprecie o Menu</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#reservas" class="modal-trigger btn waves-effect waves-light">Reserve</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <div class="container page-header-content">
+        <div class="hide-on-med-and-down" style="padding-top: 10%;">
+            <h1>Restaurante</h1>
+            <img src="/assets/img/TiaMariaLetterWhite.svg" style="width: 50%;" alt="">
+            <h3>{{ site.description }}</h3>
+        </div>
+
+        <div class="hide-on-large-only">
+            <h3>{{ site.title }}</h3>
+            <h5>{{ site.description }}</h5>
+        </div>
+
+        {% include header/cta.html %}
     </div>
 </header>

@@ -1,14 +1,17 @@
 - title: Home
   url: /
 
-- title: Menu
-  url: "#menu"
+- title: Sobre
+  url: "#sobre"
 
-- title: Reservas
-  url: "#reservas"
+- title: Restaurante
+  url: "#restaurante"
 
-- title: Resort
-  url: "#resort"
+- title: Catering
+  url: "#catering"
+
+- title: Eventos
+  url: "#eventos"
 
 - title: Galeria
   url: "#galeria"
