@@ -1,5 +1,5 @@
 <nav class="white primary-color-text">
-    <div class="container">
+    <div style="padding-right: 10px; padding-left: 10px;">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">
                 {% include nav/TiaMariaLogo.svg %} {% include nav/TiaMariaLogotipo.svg %}
@@ -26,8 +26,16 @@
             <li>
                 <a href="mailto:{{ site.email }}" class="primary-color-text">
                     <i class="fas fa-lg fa-envelope"></i> {{ site.email }}
-                </a>
+                </a> 
             </li>
+
+            {% for item in site.data.social %}
+                <li>
+                    <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text waves-effect waves-primary">
+                        <i class="fab fa-{{ item.icon }}"></i>
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 </nav>
