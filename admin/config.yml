@@ -7,19 +7,6 @@ media_folder: 'assets/uploads'
 logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc56834b4489/b2edb/assets/img/brand/logo.svg'
 
 collections:
-  - label: "Slides"
-    name: "slider"
-    folder: "collections/_slider"
-    create: true
-    fields:
-      - {label: "Slides", name: "title", default: "Slider", widget: "hidden"}
-      - label: "Imagens"
-        name: "images"
-        widget: "list"
-        fields:
-          - label: "Imagem"
-            name: "image"
-            widget: "image"    
 
   - label: "Sobre"
     name: "sobre"
@@ -47,7 +34,7 @@ collections:
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Dia da Semana", name: "publish-day", widget: "string"}
       - {label: "Prado do Dia", name: "publish", widget: "boolean", default: "false"}
-      - {label: "Preço", name: "price", widget: "number", valueType: "float"}
+      - {label: "Preço", name: "price", widget: "number"}
 
   - label: "Menu"
     name: "menu"
@@ -60,7 +47,7 @@ collections:
         name: "category"
         widget: "select"
         options: ["Entradas", "Bebidas", "Pratos", "Pizzas", "Saladas", "Sobremesas", "Sandes"]
-      - {label: "Preço", name: "price", widget: "number", valueType: "float"}
+      - {label: "Preço", name: "price", widget: "number"}
 
   - label: "Eventos"
     name: "eventos"
