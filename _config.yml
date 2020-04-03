@@ -13,14 +13,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-collections_dir: collection
+collections_dir: collections
 collections:
-  slider:
   sobre:
+  menu:
+  prato-do-dia:
+  eventos:
   historia:
   servicos:
-  menu:
-  eventos:
 
 # Assets
 sass:

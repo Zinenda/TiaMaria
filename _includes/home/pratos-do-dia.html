@@ -1,0 +1,52 @@
+<style>
+    .pratos-container {
+        position: relative;
+    }
+
+    .text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    .text p {
+        background-color: rgba(0,0,0,0.5);
+        border: solid 1px #fff;
+        padding: 10px;
+        text-align: center;
+        color: #fff;
+    }
+</style>
+
+<section class="section">
+    <div class="container">
+        <div class="section-grid">
+            <article>
+                <h4 class="primary-color-text">Pratos Diários</h4>
+
+                <blockquote>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse magni hic! Optio maxime sunt repudiandae animi ipsa commodi beatae officia. Fuga iste aliquam officiis qui reprehenderit odit voluptates distinctio.
+                </blockquote>
+            </article>
+
+            <div class="section-grid">
+                {% for item in site.prato-do-dia %}
+                    <div class="pratos-container">
+                        <img 
+                            data-src="{{ item.image }}?nf_resize=smartcrop&w=260&h=260" 
+                            alt="{{ item.title }}" 
+                            data-srcset="{{ item.image }}?nf_resize=smartcrop&w=320&h=320 2x" 
+                            class="lazy materialboxed"
+                            data-caption="{{ item.title }} - {{ item.price }} MT">
+
+                            <div class="text">
+                                <p class="bold">{{ item.title }}</p>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
