@@ -45,7 +45,7 @@ collections:
       - label: "Tipos de Pratos"
         name: "category"
         widget: "select"
-        options: ["Entradas", "Bebidas_Quentes", "Acompanhamentos", "Bar", "Carnes_Mariscos", "Sobremesas", "Sandes"]
+        options: ["Entradas", "Bebidas_Quentes", "Acompanhamentos", "Bar", "Carnes", "Mariscos", "Sobremesas", "Sandes"]
       - {label: "Preço", name: "price", widget: "number"}
 
   - label: "Eventos"
