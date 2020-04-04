@@ -16,7 +16,9 @@ plugins:
 collections_dir: collections
 collections:
   sobre:
-  menu:
+  bar:
+  bebidas:
+  restaurante:
   prato-do-dia:
   eventos:
   historia:

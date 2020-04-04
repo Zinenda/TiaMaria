@@ -36,17 +36,44 @@ collections:
       - {label: "Prado do Dia", name: "publish", widget: "boolean", default: "false"}
       - {label: "Preço", name: "price", widget: "number"}
 
-  - label: "Menu"
-    name: "menu"
-    folder: "collections/_menu"
+  - label: "Menu - Restaurante"
+    name: "restaurante"
+    folder: "collections/_restaurante"
     create: true
     fields:
-      - {label: "Produto", name: "title", widget: "string"}
+      - {label: "Prato", name: "title", widget: "string"}
       - label: "Tipos de Pratos"
         name: "category"
         widget: "select"
-        options: ["Entradas", "Bebidas_Quentes", "Acompanhamentos", "Bar", "Carnes", "Mariscos", "Sobremesas", "Sandes"]
+        options: ["Entradas", "Acompanhamentos", "Carnes", "Mariscos", "Peixes", "Sobremesas", "Sandes"]
       - {label: "Preço", name: "price", widget: "number"}
+
+  - label: "Menu - Bar"
+    name: "bar"
+    folder: "collections/_bar"
+    create: true
+    fields:
+      - {label: "Bibida", name: "title", widget: "string"}
+      - label: "Tipo de Bebida"
+        name: "category"
+        widget: "select"
+        options: ["Cerveja", "Refrigerantes", "Chá & Café"]
+      - {label: "Preço", name: "price", widget: "number"}
+
+  - label: "Menu - Bebidas"
+    name: "bebida"
+    folder: "collections/_bebidas"
+    create: true
+    fields:
+      - {label: "Bibida", name: "title", widget: "string"}
+      - label: "Tipo de Bebida"
+        name: "category"
+        widget: "select"
+        options: ["Whiskey", "Gin", "Cachaça", "Vodka", "Amarula", "Vinhos"]
+      - {label: "Preço", name: "price", widget: "number"}
+      - {label: "Shots", name: "shot", widget: "boolean", default: true, required: false}
+      - {label: "Preço do shot/taça", name: "shotprice", widget: "number", required: false}
+
 
   - label: "Eventos"
     name: "eventos"
