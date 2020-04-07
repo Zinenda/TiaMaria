@@ -1,5 +1,5 @@
 ---
 title: Camarão Tigre
 category: Mariscos
-price: 450
+price: 1250
 ---
