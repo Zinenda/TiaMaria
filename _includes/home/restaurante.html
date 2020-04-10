@@ -10,7 +10,7 @@
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
         #restaurante {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/bg/quiabo-chima-restaurante-mobile-bg.jpg?nf_resize=fit&h=768);
+            background-image: url(/assets/img/bg/quiabo-chima-restaurante-mobile-bg.jpg?nf_resize=fit&h=768);
         }
     }
 
@@ -25,7 +25,7 @@
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
         #restaurante {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/bg/quiabo-chima-restaurante-bg.jpg?nf_resize=fit&h=992);
+            background-image: url(/assets/img/bg/quiabo-chima-restaurante-bg.jpg?nf_resize=fit&h=992);
             background-attachment: fixed;
         }
     } 
@@ -33,7 +33,7 @@
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
         #restaurante {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/assets/img/bg/quiabo-chima-restaurante-bg.jpg?nf_resize=fit&w=1920);
+            background-image: url(/assets/img/bg/quiabo-chima-restaurante-bg.jpg?nf_resize=fit&w=1920);
             background-attachment: fixed;
         }
     }
@@ -41,14 +41,62 @@
 
 <section class="section scrollspy" id="restaurante">
     <div class="container">
-        <h4 class="primary-color-text">Restaurante</h4>
+        <section class="section row">
+            <div class="col s12 l6">
+                <h4 class="primary-color-text">Restaurante</h4>
 
-        <ul>
-            {% for item in site.restaurante %}
-                <li>- {{ item.category }}</li>
-            {% endfor %}
-        </ul>
+                <div class="section-grid">
+                    <div class="pratos-container">
+                        <img 
+                            data-src="/assets/uploads/restaurante/soup-with-onion-and-meat-750827.jpg?nf_resize=smartcrop&w=260&h=260" 
+                            alt="{{ item.title }}" 
+                            data-srcset="/assets/uploads/restaurante/soup-with-onion-and-meat-750827.jpg?nf_resize=smartcrop&w=320&h=320 2x" 
+                            class="lazy">
 
-        <a href="/restaurante/" class="btn waves-effect waves-light white primary-color-text">Veja Mais</a>
+                            <div class="text">
+                                <p class="bold">Entradas</p>
+                            </div>
+                    </div>
+
+                    <div class="pratos-container">
+                        <img 
+                            data-src="/assets/uploads/restaurante/burger-with-fried-fries-on-black-plate-with-sauce-on-the-1199957.jpg?nf_resize=smartcrop&w=260&h=260" 
+                            alt="{{ item.title }}" 
+                            data-srcset="/assets/uploads/restaurante/burger-with-fried-fries-on-black-plate-with-sauce-on-the-1199957.jpg?nf_resize=smartcrop&w=320&h=320 2x" 
+                            class="lazy">
+
+                            <div class="text">
+                                <p class="bold">Sandes</p>
+                            </div>
+                    </div>
+
+                    <div class="pratos-container">
+                        <img 
+                            data-src="/assets/uploads/restaurante/ximacouve.jpg?nf_resize=smartcrop&w=260&h=260" 
+                            alt="{{ item.title }}" 
+                            data-srcset="/assets/uploads/restaurante/ximacouve.jpg?nf_resize=smartcrop&w=320&h=320 2x" 
+                            class="lazy">
+
+                            <div class="text">
+                                <p class="bold">Acompanhantes</p>
+                            </div>
+                    </div>
+
+                    <div class="pratos-container">
+                        <img 
+                            data-src="/assets/uploads/restaurante/14FrangoBatatasArroz.jpg?nf_resize=smartcrop&w=260&h=260" 
+                            alt="{{ item.title }}" 
+                            data-srcset="/assets/uploads/restaurante/14FrangoBatatasArroz.jpg?nf_resize=smartcrop&w=320&h=320 2x" 
+                            class="lazy">
+
+                            <div class="text">
+                                <p class="bold">Carnes & Marriscos</p>
+                            </div>
+                    </div>
+                </div>
+
+                <a href="/restaurante/" class="btn waves-effect waves-light white primary-color-text">Veja Mais</a>
+            </div>
+        </section>
     </div>
 </section>
