@@ -1,0 +1,25 @@
+<header class="slider">
+    <ul class="slides hide-on-med-and-up">
+        {% for item in site.slider limit: 4 %}
+            <li>
+                <img src="{{ item.small-image }}" alt="{{ item.title }}">
+                
+                <div class="caption">
+                    <h4>{{ item.title }}</h4>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <ul class="slides hide-on-small-only">
+        {% for item in site.slider limit: 4 %}
+            <li>
+                <img src="{{ item.large-image }}" alt="{{ item.title }}">
+                
+                <div class="caption">
+                    <h4>{{ item.title }}</h4>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</header>

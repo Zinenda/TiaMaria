@@ -15,6 +15,7 @@ plugins:
 
 collections_dir: collections
 collections:
+  slider:
   sobre:
   bar:
   bebidas:
