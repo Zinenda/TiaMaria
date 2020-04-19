@@ -1,0 +1,40 @@
+<div id="contactModal" class="modal">
+    <div class="container modal-content">
+        <h4 class="primary-color-dark-text center" style="padding: 1rem 0;">Contactos</h4>
+        <ul class="section-grid">
+            <li class="card-panel center" style="padding: 1.5rem 0; white-space: nowrap;">
+                <a href="#" class="primary-color-text">
+                    <i class="medium material-icons">place</i>
+                    <br> 
+                    Av. Eduardo Mondlane <br> Cidade de Tete
+                </a>
+            </li>
+        
+            <li class="card-panel center" style="padding: 1.5rem 0; white-space: nowrap;">
+                <a href="tel:+258 84 013 4804" class="primary-color-text">
+                    <i class="medium material-icons">phone_iphone</i>
+                    <br> 
+                    84 013 4804
+                </a>
+            </li>
+        
+            <li class="card-panel center" style="padding: 1.5rem 0; white-space: nowrap;">
+                <a href="mailto:{{ site.email }}" class="primary-color-text">
+                    <i class="medium material-icons">email</i>
+                    <br>
+                    {{ site.email }}
+                </a> 
+            </li>
+        
+            <li class="card-panel center" style="padding: 1.5rem 0; white-space: nowrap;">
+                <a href="#reservas" class="modal-trigger primary-color-text">
+                    <i class="medium material-icons">receipt</i>
+                    <br>
+                    Reservas
+                </a> 
+            </li>
+        </ul>  
+    </div>
+</div>
+
+{% include nav/reservas.html %}

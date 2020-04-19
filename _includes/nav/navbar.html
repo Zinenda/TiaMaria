@@ -1,41 +1,31 @@
-<nav class="white primary-color-text">
-    <div style="padding-right: 10px; padding-left: 10px;">
+<div class="navbar-fixed">
+    <nav class="nav-extended white primary-color-text">
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">
-                {% include nav/TiaMariaLogo.svg %} {% include nav/TiaMariaLogotipo.svg %}
+                {% include nav/LogotipoRestauranteTiaMaria.svg %}
             </a>
-
-            <a href="#" data-target="sideNav" class="sidenav-trigger">
+    
+            <a href="#" data-target="sideNav" class="sidenav-trigger primary-color-text">
                 <i class="fas fa-lg fa-bars"></i>
             </a>
+    
+            <ul class="right hide-on-med-and-down">
+                {% include nav/nav.html %}
+    
+                {% include social.html %}
+            </ul>
+    
+            {% include nav/sidenav.html %}
         </div>
+    
+        <div class="nav-content">
+            <button title="Contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger" data-target="contactModal">
+                <div class="center">
+                    <i class="far fa-lg fa-address-book"></i>
+                </div>
+            </button>
+        </div>
+    </nav>
+</div>
 
-        <ul class="right hide-on-med-and-down">
-            <li>
-                <a href="#" class="primary-color-text">
-                    <i class="fas fa-lg fa-map-marker-alt"></i> Av. Eduardo Mondlane, Cidade de Tete
-                </a>
-            </li>
-
-            <li>
-                <a href="tel:+258 84 013 4804" class="primary-color-text">
-                    <i class="fas fa-lg fa-phone"></i> 84 013 4804
-                </a>
-            </li>
-
-            <li>
-                <a href="mailto:{{ site.email }}" class="primary-color-text">
-                    <i class="fas fa-lg fa-mail-bulk"></i> {{ site.email }}
-                </a> 
-            </li>
-
-            {% for item in site.data.social %}
-                <li>
-                    <a href="{{ item.url }}" title="{{ item.title }}" class="primary-color-text waves-effect waves-primary">
-                        <i class="fab fa-{{ item.icon }}"></i>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</nav>
+{% include nav/contactModal.html %}

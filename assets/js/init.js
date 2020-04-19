@@ -1,14 +1,14 @@
 $(document).ready(function(){
     $('.sidenav').sidenav();
     $('.scrollspy').scrollSpy();
-    $('.slider').slider({
-        indicators: false
-    });
+    $('select').formSelect();
+    $('.datepicker').datepicker();
+    $('.timepicker').timepicker();
     $('.tabs').tabs();
     $('.tooltipped').tooltip();
     $('.fixed-action-btn').floatingActionButton();
     $('.modal').modal();
-	$('.materialboxed').materialbox();
+    $('.materialboxed').materialbox();
 	
 	// init Lazy Image Load
 	$('.lazy').lazy();

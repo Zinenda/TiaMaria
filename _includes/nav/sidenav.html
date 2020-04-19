@@ -4,18 +4,7 @@
     <div class="divider"></div>
 
     <ul>
-        {% if page.layout == "pages" %}
-            {% include nav/nav.html %}
-    
-            {% else %}
-                {% for item in site.data.home-nav %}
-                    <li>
-                        <a href="{{ item.url }}" title="{{ item.title }}" class="waves-effect waves-primary">
-                            <i class="fas fa-{{ item.icon }}"></i> {{ item.title }}
-                        </a>
-                    </li>
-                {% endfor %}
-        {% endif %}
+        {% include nav/nav.html %}
     </ul>
     <div class="divider"></div>
 
