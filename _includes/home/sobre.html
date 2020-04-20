@@ -1,32 +1,22 @@
-<section id="sobre" class="section scrollspy">
-    <div class="container">
-        <section class="section-grid">
-            <ul class="section-grid tabs tabs-fixed-width z-depth-1">
-                {% for item in site.sobre %}
-                    <li class="tab waves-effect waves-primary">
-                        <a href="#sobreTab{{ forloop.index }}" class="primary-color-text" title="{{ item.title }}">{{ item.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+<section id="sobre" class="section scrollspy white-text">
+    <div class="container" style="padding: 5rem 0;">
+        <div class="section-grid">
+            <article>
+                {% for item in site.sobre offset: 3 limit: 1 %}
+                    <h4>{{ item.title }}</h4>
 
-            <div class="row">
-                {% for item in site.sobre %}
-                    <div class="col s12" id="sobreTab{{ forloop.index }}">
-                        <div>
-                            <div class="text-justified light">
-                                <blockquote>
-                                    <h4 class="primary-color-text">{{ item.title }}</h4>
-                                    {{ item.content }}
-                                </blockquote>
-                            </div>
-                        </div>
+                    <span class="border-white"></span>
+
+                    <div class="light" style="padding: 3rem 0; margin-top: 1rem;">
+                        {{ item.content }}
                     </div>
-                {% endfor %}
-            </div>
-        </section>
 
-        <div class="center">
-            <a href="/sobre/" class="btn waves-effect waves-light">Saiba Mais</a>
+                    <a href="/sobre/" title="Sobre Nós" class="btn waves-effect waves-light">Saiba Mais</a>
+                {% endfor %}
+            </article>
+
+            <article></article>
+            <article></article>
         </div>
     </div>
 </section>

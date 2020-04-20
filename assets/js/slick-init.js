@@ -1,10 +1,13 @@
 $(document).ready(function(){
 	$('.slick-responsive').slick({
+		dots: true,
 		lazyLoad: 'ondemand',
 		autoplay: true,
   		autoplaySpeed: 2000,
-		slidesToShow: 4,
+		slidesToShow: 3,
 		slidesToScroll: 4,
+		centerMode: true,
+		centerPadding: '20px',
 		responsive: [
 			{
 			breakpoint: 1024,

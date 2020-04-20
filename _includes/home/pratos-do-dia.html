@@ -1,50 +1,33 @@
-<style>
-    .pratos-container {
-        position: relative;
-    }
-
-    .text {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin: auto;
-        transform: translate(-50%, -50%);
-    }
-
-    .text p {
-        background-color: rgba(0,0,0,0.5);
-        border: solid 1px #fff;
-        padding: 10px;
-        text-align: center;
-        color: #fff;
-    }
-</style>
-
 <section class="section">
-    <div class="container">
-        <div class="section-grid">
-            <article>
-                <h4 class="primary-color-text">Pratos Diários</h4>
+    <div class="section-grid">
+        <div class="card-panel grey lighten-4">
+            <div class="container">
+                <h5 class="primary-color-dark-text" style="padding: 2rem 0;">Pratos do Dia</h5>
+    
+                <ul>
+                    {% for item in site.prato-do-dia %}
+                        <li>{{ item.title }}</li>
+                    {% endfor %}
+                </ul>
+    
+                <div style="padding: 2rem 0;">
+                    <a href="https://wa.me/258849158049" class="btn-large waves-effect waves-primary white primary-color-text modal-trigger" title="Encomende">Encomende</a>
+                    <a href="#" class="btn-flat btn-large waves-effect waves-primary z-depth-2" style="border: solid -1px #fff;">Veja Menu</a>
+                </div>
+            </div>
+        </div>
 
-                <blockquote>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse magni hic! Optio maxime sunt repudiandae animi ipsa commodi beatae officia. Fuga iste aliquam officiis qui reprehenderit odit voluptates distinctio.
-                </blockquote>
-            </article>
-
-            <div class="section-grid">
+        <div style="padding: 5rem 0;">
+            <div class="slick-responsive">
                 {% for item in site.prato-do-dia %}
-                    <div class="pratos-container">
-                        <img 
-                            data-src="{{ item.image }}?nf_resize=smartcrop&w=260&h=260" 
-                            alt="{{ item.title }}" 
-                            data-srcset="{{ item.image }}?nf_resize=smartcrop&w=320&h=320 2x" 
-                            class="lazy materialboxed"
-                            data-caption="{{ item.title }} - {{ item.price }} MT">
-
-                            <div class="text">
-                                <p class="bold">{{ item.title }}</p>
-                            </div>
-                    </div>
+                    <img 
+                        data-src="{{ item.image }}?nf_resize=smartcrop&w=160&h=160" 
+                        alt="{{ item.title }}" 
+                        data-srcset="{{ item.image }}?nf_resize=smartcrop&w=2600&h=260 2x,
+                        {{ item.image }}?nf_resize=smartcrop&w=320&h=320 3x" 
+                        class="lazy materialboxed"
+                        data-caption="{{ item.title }} - {{ item.price }} MT"
+                        style="padding: 0 1rem;">
                 {% endfor %}
             </div>
         </div>

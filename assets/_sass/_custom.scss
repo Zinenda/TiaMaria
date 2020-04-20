@@ -75,6 +75,40 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 
+.border {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.border::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    width: 5.5rem;
+    height: 3px;
+    background-image: linear-gradient(90deg, $primary-color-light 0%, $primary-color 75%);
+}
+
+.border-white {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.border-white::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    width: 5.5rem;
+    height: 3px;
+    background: #fff;
+}
+
+#servicos {
+    background-image: linear-gradient(90deg, $primary-color-light 0%, $primary-color 50%, $primary-color-dark 75%);
+}
+
 .inline-list {
     display: inline-flex;
 }
