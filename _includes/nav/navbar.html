@@ -1,29 +1,31 @@
 <div class="navbar-fixed">
     <nav class="nav-extended white primary-color-text">
-        <div class="nav-wrapper">
-            <a href="/" class="brand-logo">
-                {% include nav/LogotipoRestauranteTiaMaria.svg %}
-            </a>
-    
-            <a href="#" data-target="sideNav" class="sidenav-trigger primary-color-text">
-                <i class="fas fa-lg fa-bars"></i>
-            </a>
-    
-            <ul class="right hide-on-med-and-down">
-                {% include nav/nav.html %}
-    
-                {% include social.html %}
-            </ul>
-    
-            {% include nav/sidenav.html %}
-        </div>
-    
-        <div class="nav-content">
-            <button title="Contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger" data-target="contactModal">
-                <div class="center">
-                    <i class="far fa-lg fa-address-book"></i>
-                </div>
-            </button>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo">
+                    {% include nav/LogotipoRestauranteTiaMaria.svg %}
+                </a>
+        
+                <a href="#" data-target="sideNav" class="sidenav-trigger primary-color-text">
+                    <i class="fas fa-lg fa-bars"></i>
+                </a>
+        
+                <ul class="right hide-on-med-and-down">
+                    {% include nav/nav.html %}
+        
+                    {% include social.html %}
+                </ul>
+        
+                {% include nav/sidenav.html %}
+            </div>
+        
+            <div class="nav-content">
+                <button title="Contactos" class="btn-floating btn-large halfway-fab waves-effect waves-circle waves-light modal-trigger" data-target="contactModal">
+                    <div class="center">
+                        <i class="far fa-lg fa-address-book"></i>
+                    </div>
+                </button>
+            </div>
         </div>
     </nav>
 </div>
