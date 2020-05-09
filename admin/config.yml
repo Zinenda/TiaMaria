@@ -83,7 +83,15 @@ collections:
       - {label: "Shots", name: "shot", widget: "boolean", default: true, required: false}
       - {label: "Preço do shot/taça", name: "shotprice", widget: "number", required: false}
 
-
+  - label: "Galeria"
+    name: "galeria"
+    folder: "collections/_galeria"
+    create: true
+    fields:
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Categoria", name: "category", widget: "select", options: ["pratos", "eventos"]}
+      - {label: "Imagem", name: "image", widget: "image"}
+  
   - label: "Eventos"
     name: "eventos"
     folder: "collections/_eventos"

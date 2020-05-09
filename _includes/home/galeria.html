@@ -1,0 +1,16 @@
+<section id="galeria" class="section scrollspy">
+    <div class="section-content">
+        <div class="section-grid-no-gap">
+            {% for item in site.galeria limit: 12 %}
+                <img 
+                    data-src="{{ item.image }}?nf_resize=fit&w=260" 
+                    alt="{{ item.title }}" 
+                    data-srcset="{{ item.image }}?nf_resize=fit&w=320 2x,
+                    {{ item.image }}?nf_resize=fit&w=480 3x,
+                    {{ item.image }}?nf_resize=fit&w=720 4x" 
+                    class="lazy materialboxed"
+                    data-caption="{{ item.title }} - {{ item.price }} MT">
+            {% endfor %}
+        </div>
+    </div>
+</section>

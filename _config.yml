@@ -24,6 +24,7 @@ collections:
   eventos:
   historia:
   servicos:
+  galeria:
 
 # Assets
 sass:

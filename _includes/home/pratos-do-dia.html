@@ -1,4 +1,5 @@
-<section class="section">
+<!--
+    <section class="section">
     <div class="section-grid">
         <div class="card-panel grey lighten-4">
             <div class="container">
@@ -17,19 +18,38 @@
             </div>
         </div>
 
-        <div style="padding: 5rem 0;">
-            <div class="slick-responsive">
-                {% for item in site.prato-do-dia %}
-                    <img 
-                        data-src="{{ item.image }}?nf_resize=smartcrop&w=160&h=160" 
-                        alt="{{ item.title }}" 
-                        data-srcset="{{ item.image }}?nf_resize=smartcrop&w=2600&h=260 2x,
-                        {{ item.image }}?nf_resize=smartcrop&w=320&h=320 3x" 
-                        class="lazy materialboxed"
-                        data-caption="{{ item.title }} - {{ item.price }} MT"
-                        style="padding: 0 1rem;">
-                {% endfor %}
-            </div>
+        <div class="section-grid" style="margin: 2rem 0;">
+            {% for item in site.prato-do-dia %}
+                <img 
+                    data-src="{{ item.image }}?nf_resize=smartcrop&w=160&h=160" 
+                    alt="{{ item.title }}" 
+                    data-srcset="{{ item.image }}?nf_resize=smartcrop&w=2600&h=260 2x,
+                    {{ item.image }}?nf_resize=smartcrop&w=320&h=320 3x" 
+                    class="lazy materialboxed"
+                    data-caption="{{ item.title }} - {{ item.price }} MT">
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+-->
+
+<section class="row">
+    <div class="col s12 l4">
+        <h5 class="primary-color-dark-text">Pratos do Dia</h5>
+
+        <ul>
+            {% for item in site.prato-do-dia %}
+                <li>{{ item.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="col s12 l8">
+        <div class="slick-responsive">
+            {% for item in site.prato-do-dia %}
+                <img data-lazy="{{ item.image }}?nf_resize=smartcrop&w=320&h=320" alt="{{ item.title }}" style="padding: 0 10px;">
+            {% endfor %}
         </div>
     </div>
 </section>
