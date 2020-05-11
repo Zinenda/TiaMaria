@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('.slick-single').slick();
+	
 	$('.slick-responsive').slick({
 		dots: true,
 		lazyLoad: 'ondemand',

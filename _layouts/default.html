@@ -9,13 +9,18 @@ layout: compress
         {% include nav/navbar.html %}
 
         <main class="animate-bottom">
+            {% include page-header.html %}
+            
             <div id="main-content" class="scrollspy">
                 {{ content }}
             </div>
         </main>
+        
+        {% include contact-form/contact-modal.html %}
+        {% include reservas.html %}
         {% include fab.html %}
         {% include footer.html %}
-        {% include scripts.html %}
+        {% include scripts/scripts.html %}
     </body>
 
 </html>

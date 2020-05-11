@@ -1,0 +1,22 @@
+<section class="banner section-grid white">
+    <div class="container">
+        <article class="section-content">
+            <div class="container">
+                {% for item in site.sobre limit: 1 %}
+                    <h4 class="primary-color-text">{{ item.title }}</h4>
+                    <span class="border"></span>
+    
+                    <div class="section-desc light text-justified">
+                        {{ item.content }}
+                    </div>
+                {% endfor %}
+    
+                <a href="#sobreModal" class="btn white-text banner__link waves-effect waves-light modal-trigger">Saiba Mais</a>
+            </div>
+        </article>
+    </div>
+
+    <div class="banner__figure hide-on-small-only lazy" data-src="/assets/uploads/pratostipicosdatiamaria.jpg"></div>
+</section>
+
+{% include sobre/sobreModal.html %}

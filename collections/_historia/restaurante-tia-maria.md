@@ -1,5 +1,5 @@
 ---
-title: Restaurante Tia Maria
+title: "Etapa II: O Restaurante"
 ---
 
 Meados de 2013 até o presente: face aos desafios do mercado, em meados do ano de 2013, o mentor do projecto decide formalizar o negócio passando a se designar por **Restaurante Tia Maria, E. I. Eventos & Catering**, neste período já contava em sua carteira um vasto conjunto de clientes publicos, privados e organizações não governamentais. Neste mesmo periodo, Restaurante Tia Maria contava com 5 profissionais.

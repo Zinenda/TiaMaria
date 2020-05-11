@@ -1,11 +1,21 @@
 <header class="page-header">
     <div class="page-header-content container">
         <h2 class="hide-on-med-and-down white-text text-justified">
-            Delicie-se <br> de Sabores da <br> Tia Maria
+            {% if page.title %}
+                {{ page.title }}
+
+                {% else %}
+                    Delicie-se <br> de Sabores da <br> Tia Maria
+            {% endif %}
         </h2>
 
         <h4 class="hide-on-large-only white-text text-justified">
-            Delicie-se <br> de Sabores da <br> Tia Maria
+            {% if page.title %}
+                {{ page.title }}
+
+                {% else %}
+                    Delicie-se <br> de Sabores da <br> Tia Maria
+            {% endif %}
         </h4>
 
         {% include cta.html %}

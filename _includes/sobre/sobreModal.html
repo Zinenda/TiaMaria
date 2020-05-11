@@ -1,0 +1,18 @@
+<div id="sobreModal" class="modal bottom-sheet">
+    <div class="container modal-content">
+        <div class="section section-grid">
+            {% for item in site.sobre offset: 1 %}
+                <article class="card-panel section-content">
+                    <div class="container">
+                        <h4 class="primary-color-text">{{ item.title }}</h4>
+                        <span class="border"></span>
+
+                        <div class="section-desc light text-justified">
+                            {{ item.content }}
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<section class="section scrollspy white-text" id="historia">
+    <div class="container section-content">
+        <div class="section-grid">
+            {% for item in site.historia %}
+                <article style="border: solid 1px #fff;">
+                    <div class="container">
+                        <h5>{{ item.title }}</h5>
+                        <span class="border-white"></span>
+
+                        <div class="light section-desc">
+                            {{ item.content | truncatewords: 20 }}
+                        </div>
+
+                        <a href="#historia{{ forloop.index }}" class="btn-flat waves-effect waves-primary white-text modal-trigger">Leia Mais</a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include sobre/historiaModal.html %}

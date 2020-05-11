@@ -1,42 +1,6 @@
-<!--
-    <section class="section">
-    <div class="section-grid">
-        <div class="card-panel grey lighten-4">
-            <div class="container">
-                <h5 class="primary-color-dark-text" style="padding: 2rem 0;">Pratos do Dia</h5>
-    
-                <ul>
-                    {% for item in site.prato-do-dia %}
-                        <li>{{ item.title }}</li>
-                    {% endfor %}
-                </ul>
-    
-                <div style="padding: 2rem 0;">
-                    <a href="https://wa.me/258849158049" class="btn-large waves-effect waves-primary white primary-color-text modal-trigger" title="Encomende">Encomende</a>
-                    <a href="#" class="btn-flat btn-large waves-effect waves-primary z-depth-2" style="border: solid -1px #fff;">Veja Menu</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-grid" style="margin: 2rem 0;">
-            {% for item in site.prato-do-dia %}
-                <img 
-                    data-src="{{ item.image }}?nf_resize=smartcrop&w=160&h=160" 
-                    alt="{{ item.title }}" 
-                    data-srcset="{{ item.image }}?nf_resize=smartcrop&w=2600&h=260 2x,
-                    {{ item.image }}?nf_resize=smartcrop&w=320&h=320 3x" 
-                    class="lazy materialboxed"
-                    data-caption="{{ item.title }} - {{ item.price }} MT">
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
--->
-
 <section class="row">
     <div class="col s12 l4">
-        <h5 class="primary-color-dark-text">Pratos do Dia</h5>
+        <h5 class="primary-color-text">Pratos do Dia</h5>
 
         <ul>
             {% for item in site.prato-do-dia %}

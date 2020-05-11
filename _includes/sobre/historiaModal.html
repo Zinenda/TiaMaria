@@ -1,0 +1,14 @@
+{% for item in site.historia %}
+    <div id="historia{{ forloop.index }}" class="modal">
+        <div class="container modal-content">
+            <div class="section section-content">
+                <h4 class="primary-color-text">{{ item.title }}</h4>
+                <span class="border"></span>
+                
+                <div class="section-desc light text-justified">
+                    {{ item.content }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,16 @@
+<!-- netlify identity widget -->
+{% unless page.title %}
+   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endunless %}
+
+{% include scripts/fonts.html %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+
+{% include scripts/materializejs.html %}
+
+{% include scripts/lazyload.html %}
+
+{% include scripts/slick-carousel.html %}
+
+<script src="/assets/js/init.js" defer></script>
