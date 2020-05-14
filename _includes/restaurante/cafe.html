@@ -1,0 +1,20 @@
+<article id="cafe">
+    <h5 class="primary-color-text">Chá & Café</h5>
+    
+    <div class="section-desc">
+        {% for item in site.bar %}
+            {% if item.category == "Chá & Café" %}
+                <div class="row">
+                    <div class="col s6">
+                        <p>{{ item.title }}</p>
+                    </div>
+
+                    <div class="col s6">
+                        <p>{{ item.price }}.00 MT</p>
+                    </div>
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</article>

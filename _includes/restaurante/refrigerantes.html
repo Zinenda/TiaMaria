@@ -1,0 +1,20 @@
+<article id="refrigerantes">
+    <h5 class="primary-color-text">Refrigerantes</h5>
+    
+    <div class="section-desc">
+        {% for item in site.bar %}
+            {% if item.category == "Refrigerantes" %}
+                <div class="row">
+                    <div class="col s6">
+                        <p>{{ item.title }}</p>
+                    </div>
+
+                    <div class="col s6">
+                        <p>{{ item.price }}.00 MT</p>
+                    </div>
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</article>

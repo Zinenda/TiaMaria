@@ -1,0 +1,24 @@
+<article id="whiskey">
+    <h5 class="primary-color-text">Whiskey</h5>
+    
+    <div class="section-desc">
+        {% for item in site.bebidas %}
+            {% if item.category == "Whiskey" %}
+                <div class="row">
+                    <div class="col s4">
+                        <p>{{ item.title }}</p>
+                    </div>
+
+                    <div class="col s4">
+                        <p>{{ item.shotprice }}.00 MT</p>
+                    </div>
+
+                    <div class="col s4">
+                        <p>{{ item.price }}.00 MT</p>
+                    </div>
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</article>
