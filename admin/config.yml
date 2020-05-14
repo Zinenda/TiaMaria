@@ -8,15 +8,6 @@ logo_url: 'https://d33wubrfki0l68.cloudfront.net/f1afd154dd1bd09e6957dce7291bfc5
 
 collections:
 
-  - label: "Slider"
-    name: "slider"
-    folder: "collections/_slider"
-    create: true
-    fields:
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Imagem menor", name: "small-image", widget: "image"}
-      - {label: "Imagem maior", name: "large-image", widget: "image"}
-
   - label: "Sobre"
     name: "sobre"
     folder: "collections/_sobre"
