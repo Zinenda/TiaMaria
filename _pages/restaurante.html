@@ -4,3 +4,41 @@ layout: default
 ---
 
 {% include restaurante/intro.html %}
+
+<section class="section white-text">
+    <div class="container">
+        <section class="section-content">
+            <div class="section-grid">
+                {% include restaurante/entradas.html %}
+
+                {% include restaurante/acompanhamentos.html %}
+
+                {% include restaurante/sandes.html %}
+            </div>
+
+            <section class="section-grid">
+                {% include restaurante/peixes.html %}
+
+                {% include restaurante/mariscos.html %}
+                
+                {% include restaurante/carnes.html %}
+            </section>
+        </section>
+    </div>
+</section>
+
+{% include restaurante/bar-intro.html %}
+
+<section class="section white-text">
+    <div class="container">
+        <section class="section-content">
+            <section class="section-grid">
+                {% include restaurante/cafe.html %}
+
+                {% include restaurante/refrigerantes.html %}
+
+                {% include restaurante/cervejas.html %}
+            </section>
+        </section>
+    </div>
+</section>
