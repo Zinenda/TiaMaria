@@ -1,20 +1,22 @@
 <section id="galeria" class="section scrollspy">
-    <div class="section-content">
-        <div class="section-grid-no-gap">
-            {% for item in site.galeria limit: 12 %}
-                <img 
-                    data-src="{{ item.image }}?nf_resize=fit&w=260" 
-                    alt="{{ item.title }}" 
-                    data-srcset="{{ item.image }}?nf_resize=fit&w=320 2x,
-                    {{ item.image }}?nf_resize=fit&w=480 3x,
-                    {{ item.image }}?nf_resize=fit&w=720 4x" 
-                    class="lazy materialboxed"
-                    data-caption="{{ item.title }} - {{ item.price }} MT">
-            {% endfor %}
-        </div>
-
-        <div class="center">
-            <a href="/galeria/" class="btn-flat btn-large white-text waves-effect waves-primary" style="border: solid 1px #fff;">Aprecie Mais</a>
+    <div class="container">
+        <div class="section-content">
+            <div class="section-grid-no-gap">
+                {% for item in site.galeria limit: 4 %}
+                    <img 
+                        data-src="{{ item.image }}?nf_resize=fit&w=260" 
+                        alt="{{ item.title }}" 
+                        data-srcset="{{ item.image }}?nf_resize=fit&w=320 2x,
+                        {{ item.image }}?nf_resize=fit&w=480 3x,
+                        {{ item.image }}?nf_resize=fit&w=720 4x" 
+                        class="lazy materialboxed"
+                        data-caption="{{ item.title }} - {{ item.price }} MT">
+                {% endfor %}
+            </div>
+    
+            <div class="center" style=" padding: 1rem 0;">
+                <a href="/galeria/" class="btn-flat btn-large white-text waves-effect waves-primary" style="border: solid 1px #fff;">Aprecie Mais</a>
+            </div>
         </div>
     </div>
 </section>
